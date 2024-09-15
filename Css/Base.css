@@ -1,0 +1,30 @@
+@font-face {
+    font-family: yekan;
+    src: url(../Fonts/iranyekanwebbold.ttf);
+}
+
+*{
+    font-family: yekan;
+}
+
+samp{
+    font-family: yekan;
+}
+
+
+/* Scrollbar */
+::-webkit-scrollbar{
+    background-color: rgb(53, 53, 53);
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(129, 129, 129);
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #b97979; 
+}
+
+/* End of Scrollbar */
