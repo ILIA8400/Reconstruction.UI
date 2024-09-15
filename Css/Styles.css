@@ -89,9 +89,15 @@ header{
 /* End of Header */
 
 /* Main */
-main{
-    height: 400px;
+/* Renovation Description */
+.order-btn{
+    transition: all .4s ease;
 }
+
+.order-btn:hover{
+    transform: translateY(-5px);
+}
+/* End of Renovation Description */
 /* End of Main */
 
 /* Footer */
