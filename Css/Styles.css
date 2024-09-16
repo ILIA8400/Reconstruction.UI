@@ -98,6 +98,55 @@ header{
     transform: translateY(-5px);
 }
 /* End of Renovation Description */
+
+/* Guideline */
+.ani-right-step{
+    animation-name: stepsRight;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+}
+.ani-right-text{
+    animation-name: stepsRight;
+    animation-duration: 2s;
+    animation-delay: .3s;
+    animation-fill-mode: backwards;
+}
+
+.ani-left-step{
+    animation-name: stepsLeft;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+}
+.ani-left-text{
+    animation-name: stepsLeft;
+    animation-duration: 2s;
+    animation-delay: .3s;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes stepsLeft{
+    0%{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes stepsRight{
+    0%{
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+/* End of Guideline */
 /* End of Main */
 
 /* Footer */
