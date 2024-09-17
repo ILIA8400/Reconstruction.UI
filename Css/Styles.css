@@ -236,6 +236,43 @@ header{
   
 /* End of Projects */
 
+/* Question */
+.input{
+    background: transparent;
+    border: none;
+    border-radius: 0px;
+    color: #000000;
+    border-bottom: solid 2px #ccc;
+    font-family: yekan,Arial, Helvetica, sans-serif;
+}
+
+.input::placeholder{
+    color: #6d898b;
+}
+
+.input:focus{
+    background: transparent;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    border-bottom: solid 3px red;
+    color: black;
+}
+
+.card-request{
+    border: none;
+    border: 1px solid red;
+    outline-style: ridge;
+    outline-width: 3px;
+    outline-color: #0084ff;
+}
+
+.question-btn:focus{
+    box-shadow: none;
+}
+
+/* End of Question */
+
 /* End of Main */
 
 /* Footer */
