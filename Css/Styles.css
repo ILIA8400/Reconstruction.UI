@@ -147,6 +147,50 @@ header{
     }
 }
 /* End of Guideline */
+
+/* Costs */
+.card-bedroom{
+    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)) ,url(../Images/bedroom.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 7px 8px 50px #555;
+    max-width: 370px;
+    transition: all .6s ease;
+}  
+.card-cook{
+    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)) ,url(../Images/cook.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    box-shadow: 7px 8px 50px #555;
+    max-width: 370px;
+    transition: all .6s ease;
+}
+.card-wc{
+    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)) ,url(../Images/wc1.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    box-shadow: 7px 8px 50px #555;
+    max-width: 370px;
+    transition: all .6s ease;
+}
+.card-reception{
+    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)) ,url(../Images/reception.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    box-shadow: 7px 8px 50px #555;
+    max-width: 370px;
+    transition: all .6s ease;
+}
+
+.card-bedroom:hover , .card-cook:hover , .card-wc:hover , .card-reception:hover{
+    transform: translateY(-10px);
+}
+/* End of Costs */
+
 /* End of Main */
 
 /* Footer */
