@@ -191,6 +191,51 @@ header{
 }
 /* End of Costs */
 
+/* Projects */
+/* .project-overlay{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card:hover .project-overlay{
+    display: flex;
+    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6));
+} */
+.project-card {
+    position: relative;
+    overflow: hidden; /* جلوگیری از نمایش هر گونه محتوای اضافی */
+    height: 100%;
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* تصویر را به اندازه کارت تنظیم می‌کند */
+  }
+  
+  .project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 110%; /* مخفی کردن overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6));
+    transition: top 1s ease;
+  }
+  
+  .project-card:hover .project-overlay {
+    top: 0; /* نمایش overlay از پایین به بالا */
+  }
+  
+  
+/* End of Projects */
+
 /* End of Main */
 
 /* Footer */
