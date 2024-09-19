@@ -72,19 +72,25 @@ for (let index = 0; index < 3; index++) {
 }
 //end brands
 
-for (let index = 0; index < 2; index++) {
-    const sec = ["concats","phones"]
-    
-    $(`.${sec[index]} a`).hover(function () {
+$('.concats a').hover(function () {
+    // over
+    $(this).removeClass("text-white").addClass("text-danger");
+}, function () {
+    // out
+    $(this).removeClass("text-danger").addClass("text-white");
+}
+)
+
+for (let index = 0; index < 4; index++) {
+    $(`.phones a:nth-child(${index+1})`).hover(function () {
         // over
-        $(this).removeClass("text-white").addClass("text-danger");
+        $(`.phones a:nth-child(${index+1}) i`).removeClass("text-white").addClass("text-danger");
     }, function () {
         // out
-        $(this).removeClass("text-danger").addClass("text-white");
+        $(`.phones a:nth-child(${index+1}) i`).removeClass("text-danger").addClass("text-white");
     }
-);
+    )
 }
-
 //end
 
 
