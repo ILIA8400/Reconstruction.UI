@@ -47,3 +47,44 @@ for (let index = 0; index < 5; index++) {
 }
 
 //end
+
+
+//Enable tooltips
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+//end
+
+// Footer
+
+//brands
+for (let index = 0; index < 3; index++) {
+    const brands = ["instagram","linkdin","telegram"]
+    const colors = ["danger","primary","info"]
+
+    $(`#${brands[index]}`).hover(function () {
+        // over
+        $(`#${brands[index]}`).addClass(`bg-${colors[index]}`);
+    }, function () {
+        // out
+        $(`#${brands[index]}`).removeClass(`bg-${colors[index]}`);
+
+    });   
+}
+//end brands
+
+for (let index = 0; index < 2; index++) {
+    const sec = ["concats","phones"]
+    
+    $(`.${sec[index]} a`).hover(function () {
+        // over
+        $(this).removeClass("text-white").addClass("text-danger");
+    }, function () {
+        // out
+        $(this).removeClass("text-danger").addClass("text-white");
+    }
+);
+}
+
+//end
+
+

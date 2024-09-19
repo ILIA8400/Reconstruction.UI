@@ -276,5 +276,27 @@ header{
 /* End of Main */
 
 /* Footer */
+.custom-tooltip-instagram {
+    --bs-tooltip-bg: var(--bs-danger);
+    --bs-tooltip-color: var(--bs-white);
+}
+.custom-tooltip-linkdin {
+    --bs-tooltip-bg: var(--bs-primary);
+    --bs-tooltip-color: var(--bs-white);
+}
+
+.custom-tooltip-telegram {
+    --bs-tooltip-bg: var(--bs-info);
+    --bs-tooltip-color: var(--bs-white);
+}
+
+.tooltip-inner{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.concats a , .phones a{
+    transition: all .5s ease;
+}
 
 /* End of Footer */
