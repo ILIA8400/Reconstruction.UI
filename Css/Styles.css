@@ -378,39 +378,87 @@ header{
 /* End of Projects */
 
 /* Question */
-.input{
-    background: transparent;
-    border: none;
-    border-radius: 0px;
-    color: #000000;
-    border-bottom: solid 2px #ccc;
-    font-family: yekan,Arial, Helvetica, sans-serif;
-}
-
-.input::placeholder{
-    color: #6d898b;
-}
-
-.input:focus{
-    background: transparent;
-    border: none;
-    border-radius: 0px;
-    box-shadow: none;
-    border-bottom: solid 3px red;
-    color: black;
-}
-
-.card-request{
-    border: none;
-    border: 1px solid red;
-    outline-style: ridge;
-    outline-width: 3px;
-    outline-color: #0084ff;
-}
 
 .question-btn:focus{
     box-shadow: none;
 }
+
+/* Request */
+.card-request {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .form_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    border: 2px solid #264143;
+    border-radius: 20px;
+    box-shadow: 3px 4px 0px 1px #DC3545;
+  }
+  
+  .title {
+    color: #264143;
+    font-weight: 900;
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+  
+  .sub_title {
+    font-weight: 600;
+    margin: 5px 0;
+  }
+  
+  .form_group {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 10px;
+  }
+  
+  .form_style {
+    outline: none;
+    border: 2px solid #264143;
+    box-shadow: 3px 4px 0px 1px #DC3545;
+    width: 290px;
+    padding: 12px 10px;
+    border-radius: 4px;
+    font-size: 15px;
+  }
+  
+  .form_style:focus, .btn:focus {
+    transform: translateY(4px);
+    box-shadow: 1px 2px 0px 0px #DC3545;
+  }
+  
+  .btn-btn {
+    padding: 15px;
+    margin: 25px 0px;
+    width: 290px;
+    font-size: 15px;
+    background: #77aace;
+    border-radius: 10px;
+    font-weight: 800;
+    box-shadow: 3px 3px 0px 0px #DC3545;
+  }
+  
+  .btn-btn:hover {
+    opacity: .85;
+  }
+  
+  .link {
+    font-weight: 800;
+    color: #264143;
+    padding: 5px;
+  }
+/* End of Request */
 
 /* End of Question */
 
