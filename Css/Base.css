@@ -11,6 +11,9 @@ samp{
     font-family: yekan;
 }
 
+:root{
+    --theme-color : black;
+}
 
 /* Scrollbar */
 ::-webkit-scrollbar{
