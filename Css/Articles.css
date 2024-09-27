@@ -1,0 +1,17 @@
+/* Search box */
+.search-input:focus{
+    box-shadow: none;
+    border: 1px red solid;
+}
+/* End of Search box */
+
+/* Articles */
+.article-body {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4; /* تعداد خطوط */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* End of Articles */
