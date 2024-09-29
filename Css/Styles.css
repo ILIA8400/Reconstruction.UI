@@ -8,6 +8,16 @@ header{
 }
 
 /* Navbar */
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #70abe2;
+}
+
+.dropdown-menu[data-bs-popper] {
+    top: 80%;
+    right: 0;
+    margin-top: var(--bs-dropdown-spacer);
+}
+
 .nav-menu{
     padding: 15px 55px;
     transition: all .7s;
@@ -21,6 +31,11 @@ header{
 .menu-item:hover{
     color: #70abe2;
     
+}
+
+.service:focus{
+    color: #70abe2;
+    cursor: pointer;
 }
 
 .nav-button{
