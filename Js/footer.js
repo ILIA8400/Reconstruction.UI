@@ -23,20 +23,20 @@ for (let index = 0; index < 3; index++) {
 
 $('.concats a').hover(function () {
     // over
-    $(this).removeClass("text-white").addClass("text-danger");
+    $(this).removeClass("text-white").addClass("text-theme-color");
 }, function () {
     // out
-    $(this).removeClass("text-danger").addClass("text-white");
+    $(this).removeClass("text-theme-color").addClass("text-white");
 }
 )
 
 for (let index = 0; index < 4; index++) {
     $(`.phones a:nth-child(${index+1})`).hover(function () {
         // over
-        $(`.phones a:nth-child(${index+1}) i`).removeClass("text-white").addClass("text-danger");
+        $(`.phones a:nth-child(${index+1}) i`).removeClass("text-white").addClass("text-theme-color");
     }, function () {
         // out
-        $(`.phones a:nth-child(${index+1}) i`).removeClass("text-danger").addClass("text-white");
+        $(`.phones a:nth-child(${index+1}) i`).removeClass("text-theme-color").addClass("text-white");
     }
     )
 }

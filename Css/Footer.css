@@ -25,4 +25,8 @@
 #instagram,#telegram,#linkdin{
     transition: all .6s ease;
 }
+
+.text-theme-color{
+    color: var(--theme-color03);
+}
 /* End of Footer */

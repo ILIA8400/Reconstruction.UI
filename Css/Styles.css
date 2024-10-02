@@ -9,7 +9,7 @@ header{
 
 /* Navbar */
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-    color: #70abe2;
+    color: var(--theme-color03);
 }
 
 .dropdown-menu[data-bs-popper] {
@@ -29,12 +29,12 @@ header{
     transition: color .5s;
 }
 .menu-item:hover{
-    color: #70abe2;
+    color: var(--theme-color03);
     
 }
 
 .service:focus{
-    color: #70abe2;
+    color: var(--theme-color03);
     cursor: pointer;
 }
 
@@ -61,11 +61,11 @@ header{
 
 .custom-navbar{
     padding: 5px 30px;
-    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8));
+    background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9));
 }
 
 .custom-navbar-ham {
-    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8));
+    background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9));
     transition: background 0.5s ease;
 }
 
@@ -112,7 +112,7 @@ header{
     transform: translate(-50%, -50%);
     width: 20px;
     height: 20px;
-    background-color: white;
+    background-color: var(--theme-color03);
     border-radius: 50%;
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -416,7 +416,7 @@ header{
     width: auto;
     border: 2px solid #264143;
     border-radius: 20px;
-    box-shadow: 3px 4px 0px 1px #DC3545;
+    box-shadow: 3px 4px 0px 1px var(--theme-color03);
   }
   
   .title {
@@ -441,7 +441,7 @@ header{
   .form_style {
     outline: none;
     border: 2px solid #264143;
-    box-shadow: 3px 4px 0px 1px #DC3545;
+    box-shadow: 3px 4px 0px 1px var(--theme-color03);
     width: 290px;
     padding: 12px 10px;
     border-radius: 4px;
@@ -450,7 +450,7 @@ header{
   
   .form_style:focus, .btn:focus {
     transform: translateY(4px);
-    box-shadow: 1px 2px 0px 0px #DC3545;
+    box-shadow: 1px 2px 0px 0px var(--theme-color03);
   }
   
   .btn-btn {
@@ -458,10 +458,10 @@ header{
     margin: 25px 0px;
     width: 290px;
     font-size: 15px;
-    background: #77aace;
+    background: var(--theme-color01);
     border-radius: 10px;
     font-weight: 800;
-    box-shadow: 3px 3px 0px 0px #DC3545;
+    box-shadow: 3px 3px 0px 0px var(--theme-color03);
   }
   
   .btn-btn:hover {
@@ -505,5 +505,9 @@ header{
 
 #instagram,#telegram,#linkdin{
     transition: all .6s ease;
+}
+
+.text-theme-color{
+    color: var(--theme-color03);
 }
 /* End of Footer */
