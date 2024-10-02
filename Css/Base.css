@@ -12,7 +12,10 @@ samp{
 }
 
 :root{
-    --theme-color : black;
+    --theme-color01 : #95B8B8;
+    --theme-color02 : #2F4E4E;
+    --theme-color03 : #F4A261;
+    --theme-color04 : #EDE9DA;
 }
 
 /* Scrollbar */
