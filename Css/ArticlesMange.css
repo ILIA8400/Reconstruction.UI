@@ -1,0 +1,137 @@
+/* Header */
+
+/* Toggler */
+#menuToggle{
+    border: none;
+}
+
+#checkbox {
+    display: none;
+  }
+  
+  .toggle {
+    position: relative;
+    width: 40px;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    height: calc(4px * 3 + 11px * 2);
+  }
+  
+  .bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: calc(4px / 2);
+    background: black;
+    color: inherit;
+    opacity: 1;
+    -webkit-transition: none 0.35s cubic-bezier(.5,-0.35,.35,1.5) 0s;
+    transition: none 0.35s cubic-bezier(.5,-0.35,.35,1.5) 0s;
+  }
+  
+  /***** Collapse Animation *****/
+  
+  .bar--top{
+    bottom: calc(50% + 11px + 4px/ 2);
+    -webkit-transition-property: bottom,margin,-webkit-transform;
+    transition-property: bottom,margin,-webkit-transform;
+    transition-property: bottom,margin,transform;
+    transition-property: bottom,margin,transform,-webkit-transform;
+    -webkit-transition-delay: calc(0s + 0.35s),0s,0s;
+            transition-delay: calc(0s + 0.35s),0s,0s;
+  }
+  
+  .bar--middle{
+    top: calc(50% - 4px/ 2);
+    -webkit-transition-property: top,opacity;
+    transition-property: top,opacity;
+    -webkit-transition-duration: 0.35s,0s;
+            transition-duration: 0.35s,0s;
+    -webkit-transition-delay: calc(0s + 0.35s * 1.3),calc(0s + 0.35s * 1.3);
+            transition-delay: calc(0s + 0.35s * 1.3),calc(0s + 0.35s * 1.3);
+  }
+  
+  .bar--bottom{
+    top: calc(50% + 11px + 4px/ 2);
+    -webkit-transition-property: top,-webkit-transform;
+    transition-property: top,-webkit-transform;
+    transition-property: top,transform;
+    transition-property: top,transform,-webkit-transform;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+  }
+  
+  #checkbox:checked + .toggle .bar--top{
+      bottom: calc(50% - 11px - 4px);
+      margin-bottom: calc(11px + 4px/ 2);
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+      -webkit-transition-delay: calc(0s + 0.35s * .3),calc(0s + 0.35s * 1.3),calc(0s + 0.35s * 1.3);
+              transition-delay: calc(0s + 0.35s * .3),calc(0s + 0.35s * 1.3),calc(0s + 0.35s * 1.3);
+  }
+  
+  #checkbox:checked + .toggle .bar--middle{
+      top: calc(50% + 11px);
+      opacity: 0;
+      -webkit-transition-duration: 0.35s,0s;
+              transition-duration: 0.35s,0s;
+      -webkit-transition-delay: 0s,calc(0s + 0.35s);
+              transition-delay: 0s,calc(0s + 0.35s);
+  }
+  
+  #checkbox:checked + .toggle .bar--bottom{
+      top: calc(50% - 4px/ 2);
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      -webkit-transition-delay: calc(0s + 0.35s * 1.3),calc(0s + 0.35s * 1.3);
+              transition-delay: calc(0s + 0.35s * 1.3),calc(0s + 0.35s * 1.3);
+  }
+/* End Toggler */
+
+.account{
+    cursor: pointer;
+}
+
+.account a{
+    transition: all .4s ease;
+} 
+
+.account a:hover{
+    background-color: #eee;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.custom-dropdown-bell .logout:active,
+.custom-dropdown-bell .logout:focus,
+.custom-dropdown-bell .logout:hover {
+    background-color: var(--bs-danger);
+    color: #fff;
+}
+
+.custom-dropdown-bell .setting:active,
+.custom-dropdown-bell .setting:focus,
+.custom-dropdown-bell .setting:hover {
+    background-color: var(--bs-info);
+    color: #fff;
+}
+/* End Header */
+
+
+/* Form */
+.input{
+    border: solid 1px red;
+}
+
+.input:focus{
+    border: solid 1px red;
+    box-shadow: 1px 2px 3px 0px red;
+}
+/* End Form */
+

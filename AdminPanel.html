@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+
+    <!-- Bootstarp Css-->
+    <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" 
+    integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" 
+    crossorigin="anonymous"
+    >
+
+    <!-- Icons -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="Css/Base.css">
+    <link rel="stylesheet" href="Css/AdminPanel.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-md bg-white py-3 px-4">
+            <div class="navbar-toggler" id="menuToggle" data-bs-toggle="collapse" data-bs-target="#mynav">
+                <input id="checkbox" type="checkbox">
+                <label class="toggle" for="checkbox">
+                    <div class="bar bar--top"></div>
+                    <div class="bar bar--middle"></div>
+                    <div class="bar bar--bottom"></div>
+                </label>
+            </div>
+            <div class="navbar-collapse collapse" id="mynav">
+                <ul class="navbar-nav list-unstyled w-100">
+
+                    <li class="nav-item account mt-2 mt-md-0 dropdown">
+                        <a class="dropdown-toggle d-flex flex-row justify-content-center align-items-center p-1 rounded-2 text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="Images/images.png" alt="" class="rounded-circle" style="width: 40px; height: 40px;">
+                            <p class="mb-0 ms-2 text-muted">سلام، <samp class="text-black">ایلیا</samp></p>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-start custom-dropdown-bell">
+                            <li>
+                                <button class="dropdown-item setting d-flex" type="button" data-bs-toggle="modal" data-bs-target="#setting">
+                                    <i class="fa-solid fa-gear mt-1 me-2"></i>تنطیمات اکانت                
+                                </button>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><button class="dropdown-item logout d-flex" type="button" data-bs-toggle="modal" data-bs-target="#exit"><i class="fa-solid fa-sign-out mt-1 me-2"></i>خارج شدن</button></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-md-auto">
+                        <a href="ProjectManage.html" class="nav-link text-center text-md-start ms-md-4 p-0"><i class="fa-solid fa-hard-hat fa-lg" style="padding-top: 22px;"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ArticlesManage.html" class="nav-link text-center text-md-start ms-md-4 p-0"><i class="fa-solid fa-file-alt fa-lg" style="padding-top: 22px;"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="AdminPanel.html" class="nav-link text-center text-md-start ms-md-4 p-0"><i class="fa-solid fa-home fa-lg" style="padding-top: 22px;"></i></a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </nav>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exit">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>ایا میخواهید خارج شوید</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-muted">در صورت خروج برای دسترسی به پنل باید مجدد وارد شوید</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-success" data-bs-dismiss="modal">می مانم</button>
+                        <button class="btn btn-danger">خروج</button>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+         <div class="modal fade" id="setting" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>تنظیمات اکانت</h4>
+                    </div>
+                    <form action="">
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label class="mb-2" for="name">نام ادمین</label>
+                                <input type="text" class="form-control form-admin">
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-2" for="name">نام کاربری</label>
+                                <input type="text" class="form-control form-admin">
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-2" for="name">پسورد</label>
+                                <input type="text" class="form-control form-admin">
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-2" for="name">تصویر پروفایل</label>
+                                <input type="file" class="form-control form-admin">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-success">ثبت</button>
+                            <button class="btn btn-danger" data-bs-dismiss="modal">خروج</button>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+         </div>
+        <!-- End Modal -->
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Main -->
+    <main class="bg-light">
+        <!-- Cards -->
+         <section class="p-5">
+            <div class="container-md">
+                <div class="row">
+
+                    <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                        <div class="d-flex align-items-center justify-content-start py-3 px-3 rounded-3 bg-white shadow-lg card-transform">
+                            <div class="p-3 bg-primary rounded-3 d-flex align-items-center">
+                                <i class="fa-solid fa-users text-white fa-2x"></i>
+                            </div>
+                            <div class="ps-2 d-flex flex-column align-items-center"  dir="ltr">
+                                <p class="mb-1 text-muted text-start">بازدید امروز</p>
+                                <h4 class="mb-0 ms-auto">۱۴,۰۰۰</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                        <div class="d-flex align-items-center justify-content-start py-3 px-3 rounded-3 bg-white shadow-lg card-transform">
+                            <div class="py-3 px-4 bg-success rounded-3 d-flex align-items-center">
+                                <i class="fa-solid fa-dollar text-white fa-2x"></i>
+                            </div>
+                            <div class="ps-2 d-flex flex-column align-items-center"  dir="ltr">
+                                <p class="mb-1 text-muted text-start me-auto">درامد</p>
+                                <h4 class="mb-0 ms-auto"><i class="fa-solid fa-plus fa-2xs"></i> ۱۴,۰۰۰,۰۰۰</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                        <div class="d-flex align-items-center justify-content-start py-3 px-3 rounded-3 bg-white shadow-lg card-transform">
+                            <div class="py-3 px-4 bg-primary rounded-3 d-flex align-items-center">
+                                <i class="fa-solid fa-building text-white fa-2x"></i>
+                            </div>
+                            <div class="ps-2 d-flex flex-column align-items-center"  dir="ltr">
+                                <p class="mb-1 text-muted text-start">پروژه ها</p>
+                                <h4 class="mb-0 ms-auto">۱۴,۰۰۰</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                        <div class="d-flex align-items-center justify-content-start py-3 px-3 rounded-3 bg-white shadow-lg card-transform">
+                            <div class="p-3 bg-primary rounded-3 d-flex align-items-center">
+                                <i class="fa-solid fa-a text-white fa-2x"></i>
+                            </div>
+                            <div class="ps-2 d-flex flex-column align-items-center"  dir="ltr">
+                                <p class="mb-1 text-muted text-start">مقالات</p>
+                                <h4 class="mb-0 ms-auto">۱۴,۰۰۰</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+         </section>
+        <!-- End Cards -->
+
+        <!-- Counseling -->
+         <section>
+            <div class="container-md">
+                <div class="row">
+
+                    <div class="col-12">
+                        <h1>لیست مشاوره ها</h1>
+                        <hr class="border-5 border-secondary">
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <div class="row justify-content-between">
+                            <div class="col-md-5">
+                                <form action="" class="d-flex">
+                                    <input type="search" placeholder="نام ، شهر ، موبایل ، توضیحات ، تاریخ" class="form-control">
+                                    <button type="submit" class="btn btn-dark ms-3"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                </form>
+                            </div>
+                            <div class="col-md-5 d-flex align-items-center mt-5 mt-md-0">
+                                <p class="mb-0 me-4">رسیدگی شده</p>
+                                <form action="">
+                                    <div class="toggle-container">
+                                        <input class="toggle-input" type="checkbox">
+                                        <div class="toggle-handle-wrapper">
+                                          <div class="toggle-handle">
+                                            <div class="toggle-handle-knob"></div>
+                                            <div class="toggle-handle-bar-wrapper">
+                                              <div class="toggle-handle-bar"></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="toggle-base">
+                                          <div class="toggle-base-inside"></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+
+                        <div class="table-responsive table-container">
+                            <table class="table table-sm table-striped table-dark table-bordered border-primary table-hover shadow-sm" style="overflow: scroll;">
+                                <caption>لیست کاربرانی که درخواست مشاوره دادن</caption>
+                                <thead class="text-center">
+                                    <tr class="table-secondary">              
+                                        <th class="fw-bold">#</th>
+                                        <th>نام</th>
+                                        <th>نام خانوادگی</th>
+                                        <th>شماره موبایل</th>
+                                        <th>شهر</th>
+                                        <th>توضیحات مشاوره</th>
+                                        <th>تاریخ</th>
+                                        <th>وضعیت رسیدگی</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center align-middle" style="cursor: pointer;">
+                                    <tr>
+                                        <td class="fw-bold">1</td>
+                                        <td>ایلیا</td>
+                                        <td>اصغرحری</td>
+                                        <td><a href="tel:۰۹۱۰۱۲۳۴۵۶۷" class="text-decoration-none text-info">۰۹۱۰۱۲۳۴۵۶۷</a></td>
+                                        <td>تهران</td>
+                                        <td style="max-width: 250px;">
+                                            <div class="overflow-auto" style="max-height: 70px;">
+                                                اتاق خواب
+                                            </div>
+                                        </td>
+                                        <td>۱۴۰۲/۰۳/۴۵</td>
+                                        <td>رسیدگی نشده</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">1</td>
+                                        <td>ایلیا</td>
+                                        <td>اصغرحری</td>
+                                        <td><a href="tel:۰۹۱۰۱۲۳۴۵۶۷" class="text-decoration-none text-info">۰۹۱۰۱۲۳۴۵۶۷</a></td>
+                                        <td>تهران</td>
+                                        <td style="max-width: 250px;">
+                                            <div class="overflow-auto" style="max-height: 70px;">
+                                                پذیرایی
+                                            </div>
+                                        </td>
+                                        <td>۱۴۰۲/۰۳/۴۵</td>
+                                        <td>رسیدگی نشده</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">1</td>
+                                        <td>ایلیا</td>
+                                        <td>اصغرحری</td>
+                                        <td><a href="tel:۰۹۱۰۱۲۳۴۵۶۷" class="text-decoration-none text-info">۰۹۱۰۱۲۳۴۵۶۷</a></td>
+                                        <td>تهران</td>
+                                        <td style="max-width: 250px;">
+                                            <div class="overflow-auto" style="max-height: 70px;">
+                                                اشپزخانه
+                                            </div>
+                                        </td>
+                                        <td>۱۴۰۲/۰۳/۴۵</td>
+                                        <td>رسیدگی نشده</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+         </section>
+        <!-- End Counseling -->
+
+        <section class="py-5 px-3">
+            <div class="container-md">
+                <div class="row bg-white rounded-3 p-3 shadow-lg justify-content-center">
+                    <!-- Projects -->
+                    <div class="col-md-12">
+                        <div class="d-flex justify-content-between">
+                            <p class="display-6"><i class="fa-solid fa-diagram-project me-2 mt-3 text-danger" style="font-size: 30px;"></i>پروژه ها</p>
+                            <a class="project-btn text-decoration-none text-center">افزودن</a>
+                        </div>
+                        <div class="table-responsive table-container">
+                            <table class="table table-striped table-bordered border-black">
+                                <thead class="text-center align-middle table-dark">
+                                    <tr>
+                                        <th>نام پروژه</th>
+                                        <th>شماره پروژه</th>
+                                        <th>تاریخ شروع</th>
+                                        <th>تاریخ پایان</th>
+                                        <th>کارفرما</th>
+                                        <th>مشتری</th>
+                                        <th>براورد هزینه</th>
+                                        <th>اتمام پروژه</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center align-middle">
+                                    <tr>
+                                        <td>چیتگر</td>
+                                        <td>۴۵</td>
+                                        <td>۱۴۰۲/۰۳/۴۵</td>
+                                        <td>۱۴۰۲/۰۳/۴۵</td>
+                                        <td>اقای روخ دوست</td>
+                                        <td>خانم میرجلیلی</td>
+                                        <td>۱۴ م ت</td>
+                                        <td>
+                                            <div class="progress bg-dark" role="progressbar" aria-label="Basic example" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" style="width: 10%"></div>
+                                            </div>
+                                        </td>
+                                        <td><button class="btn btn-outline-dark">ویرایش <i class="fa-solid fa-pencil"></i></button></td>
+                                        <td><button class="btn btn-outline-danger">حذف <i class="fa-solid fa-trash"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>چیتگر</td>
+                                        <td>۴۵</td>
+                                        <td>۱۴۰۲/۰۳/۴۵</td>
+                                        <td>۱۴۰۲/۰۳/۴۵</td>
+                                        <td>اقای روخ دوست</td>
+                                        <td>خانم میرجلیلی</td>
+                                        <td>۱۴ م ت</td>
+                                        <td>
+                                            <div class="progress bg-dark" role="progressbar" aria-label="Basic example" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" style="width: 40%"></div>
+                                            </div>
+                                        </td>
+                                        <td><button class="btn btn-outline-dark">ویرایش <i class="fa-solid fa-pencil"></i></button></td>
+                                        <td><button class="btn btn-outline-danger">حذف <i class="fa-solid fa-trash"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>چیتگر</td>
+                                        <td>۴۵</td>
+                                        <td>۱۴۰۲/۰۳/۴۵</td>
+                                        <td>۱۴۰۲/۰۳/۴۵</td>
+                                        <td>اقای روخ دوست</td>
+                                        <td>خانم میرجلیلی</td>
+                                        <td>۱۴ م ت</td>
+                                        <td>
+                                            <div class="progress bg-dark" role="progressbar" aria-label="Basic example" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" style="width: 88%"></div>
+                                            </div>
+                                        </td>
+                                        <td><button class="btn btn-outline-dark">ویرایش <i class="fa-solid fa-pencil"></i></button></td>
+                                        <td><button class="btn btn-outline-danger">حذف <i class="fa-solid fa-trash"></i></button></td>
+                                    </tr> 
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- End Projects -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles -->
+        <section class="py-5">
+            <div class="container-md">
+                <div class="row bg-white rounded-3 py-3 shadow-lg justify-content-center">
+                    <p class="display-3 text-center mb-0 mb-lg-4">مقالات</p>
+                    <div class="col-lg-10 d-none d-lg-block">
+
+                        <div id="carouselExample" class="carousel slide">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card h-100">
+                                            <img src="Images/cook.jpg" alt="" class="card-img-top h-100">
+                                            <div class="card-body">
+                                                <h4>چرا بسازیم</h4>
+                                                <p class="article-body">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده</p>
+                                                <div class="d-block text-center">
+                                                    <a href="" class="text-decoration-none link-opacity-50-hover">بیشتر بخوانید <i class="fa-solid fa-external-link-alt"></i></a>
+                                                </div>                             
+                                            </div>
+                                            <div class="card-footer d-flex flex-row">
+                                                <p class="border-end border-black pe-2 mb-0 h6">مجید علیاری</p>
+                                                <p class="border-end border-black px-2 mb-0 h6">۱۳ خرداد ۱۴۰۲</p>
+                                                <p class="px-2 mb-0 h6">۵ دقیقه</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card h-100">
+                                            <img src="Images/cook.jpg" alt="" class="card-img-top h-100">
+                                            <div class="card-body">
+                                                <h4>چرا بسازیم</h4>
+                                                <p class="article-body">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده</p>
+                                                <div class="d-block text-center">
+                                                    <a href="" class="text-decoration-none link-opacity-50-hover">بیشتر بخوانید <i class="fa-solid fa-external-link-alt"></i></a>
+                                                </div>                             
+                                            </div>
+                                            <div class="card-footer d-flex flex-row">
+                                                <p class="border-end border-black pe-2 mb-0 h6">مجید علیاری</p>
+                                                <p class="border-end border-black px-2 mb-0 h6">۱۳ خرداد ۱۴۰۲</p>
+                                                <p class="px-2 mb-0 h6">۵ دقیقه</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card h-100">
+                                            <img src="Images/cook.jpg" alt="" class="card-img-top h-100">
+                                            <div class="card-body">
+                                                <h4>چرا بسازیم</h4>
+                                                <p class="article-body">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده</p>
+                                                <div class="d-block text-center">
+                                                    <a href="" class="text-decoration-none link-opacity-50-hover">بیشتر بخوانید <i class="fa-solid fa-external-link-alt"></i></a>
+                                                </div>                             
+                                            </div>
+                                            <div class="card-footer d-flex flex-row">
+                                                <p class="border-end border-black pe-2 mb-0 h6">مجید علیاری</p>
+                                                <p class="border-end border-black px-2 mb-0 h6">۱۳ خرداد ۱۴۰۲</p>
+                                                <p class="px-2 mb-0 h6">۵ دقیقه</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                              </div>
+                              <div class="carousel-item">
+                                
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card h-100">
+                                            <img src="Images/cook.jpg" alt="" class="card-img-top h-100">
+                                            <div class="card-body">
+                                                <h4>چرا بسازیم</h4>
+                                                <p class="article-body">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده</p>
+                                                <div class="d-block text-center">
+                                                    <a href="" class="text-decoration-none link-opacity-50-hover">بیشتر بخوانید <i class="fa-solid fa-external-link-alt"></i></a>
+                                                </div>                             
+                                            </div>
+                                            <div class="card-footer d-flex flex-row">
+                                                <p class="border-end border-black pe-2 mb-0 h6">مجید علیاری</p>
+                                                <p class="border-end border-black px-2 mb-0 h6">۱۳ خرداد ۱۴۰۲</p>
+                                                <p class="px-2 mb-0 h6">۵ دقیقه</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card h-100">
+                                            <img src="Images/cook.jpg" alt="" class="card-img-top h-100">
+                                            <div class="card-body">
+                                                <h4>چرا بسازیم</h4>
+                                                <p class="article-body">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده</p>
+                                                <div class="d-block text-center">
+                                                    <a href="" class="text-decoration-none link-opacity-50-hover">بیشتر بخوانید <i class="fa-solid fa-external-link-alt"></i></a>
+                                                </div>                             
+                                            </div>
+                                            <div class="card-footer d-flex flex-row">
+                                                <p class="border-end border-black pe-2 mb-0 h6">مجید علیاری</p>
+                                                <p class="border-end border-black px-2 mb-0 h6">۱۳ خرداد ۱۴۰۲</p>
+                                                <p class="px-2 mb-0 h6">۵ دقیقه</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card h-100">
+                                            <img src="Images/cook.jpg" alt="" class="card-img-top h-100">
+                                            <div class="card-body">
+                                                <h4>چرا بسازیم</h4>
+                                                <p class="article-body">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده</p>
+                                                <div class="d-block text-center">
+                                                    <a href="" class="text-decoration-none link-opacity-50-hover">بیشتر بخوانید <i class="fa-solid fa-external-link-alt"></i></a>
+                                                </div>                             
+                                            </div>
+                                            <div class="card-footer d-flex flex-row">
+                                                <p class="border-end border-black pe-2 mb-0 h6">مجید علیاری</p>
+                                                <p class="border-end border-black px-2 mb-0 h6">۱۳ خرداد ۱۴۰۲</p>
+                                                <p class="px-2 mb-0 h6">۵ دقیقه</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                              </div>
+                              <div class="carousel-item">
+                                
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card h-100">
+                                            <img src="Images/cook.jpg" alt="" class="card-img-top h-100">
+                                            <div class="card-body">
+                                                <h4>چرا بسازیم</h4>
+                                                <p class="article-body">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده</p>
+                                                <div class="d-block text-center">
+                                                    <a href="" class="text-decoration-none link-opacity-50-hover">بیشتر بخوانید <i class="fa-solid fa-external-link-alt"></i></a>
+                                                </div>                             
+                                            </div>
+                                            <div class="card-footer d-flex flex-row">
+                                                <p class="border-end border-black pe-2 mb-0 h6">مجید علیاری</p>
+                                                <p class="border-end border-black px-2 mb-0 h6">۱۳ خرداد ۱۴۰۲</p>
+                                                <p class="px-2 mb-0 h6">۵ دقیقه</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card h-100">
+                                            <img src="Images/cook.jpg" alt="" class="card-img-top h-100">
+                                            <div class="card-body">
+                                                <h4>چرا بسازیم</h4>
+                                                <p class="article-body">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده</p>
+                                                <div class="d-block text-center">
+                                                    <a href="" class="text-decoration-none link-opacity-50-hover">بیشتر بخوانید <i class="fa-solid fa-external-link-alt"></i></a>
+                                                </div>                             
+                                            </div>
+                                            <div class="card-footer d-flex flex-row">
+                                                <p class="border-end border-black pe-2 mb-0 h6">مجید علیاری</p>
+                                                <p class="border-end border-black px-2 mb-0 h6">۱۳ خرداد ۱۴۰۲</p>
+                                                <p class="px-2 mb-0 h6">۵ دقیقه</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card h-100">
+                                            <img src="Images/cook.jpg" alt="" class="card-img-top h-100">
+                                            <div class="card-body">
+                                                <h4>چرا بسازیم</h4>
+                                                <p class="article-body">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آیندهلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده</p>
+                                                <div class="d-block text-center">
+                                                    <a href="" class="text-decoration-none link-opacity-50-hover">بیشتر بخوانید <i class="fa-solid fa-external-link-alt"></i></a>
+                                                </div>                             
+                                            </div>
+                                            <div class="card-footer d-flex flex-row">
+                                                <p class="border-end border-black pe-2 mb-0 h6">مجید علیاری</p>
+                                                <p class="border-end border-black px-2 mb-0 h6">۱۳ خرداد ۱۴۰۲</p>
+                                                <p class="px-2 mb-0 h6">۵ دقیقه</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                              <span class="fa-solid fa-chevron-right text-danger fa-2x" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                              <span class="fa-solid fa-chevron-left text-danger fa-2x" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 col-md-8 lg-0 mt-lg-5">
+                        <p class="h1 d-none d-lg-block">لیست مقالات</p>
+                        <div class="table-responsive table-container">
+                            <table class="table">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>عنوان</th>
+                                        <th>نویسنده</th>
+                                        <th>زمان مطالعه</th>
+                                        <th>تاریخ ایجاد</th>
+                                        <th>بروزرسانی</th>    
+                                        <th></th>         
+                                        <th></th>                    
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center align-middle">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>چرا بازسازی</td>
+                                        <td>علی اکبر</td>
+                                        <td>۵ دقیقه</td>
+                                        <td>۱۴۰۲/۰۳/۴۵</td>
+                                        <td>۱۴۰۲/۰۳/۴۵</td>
+                                        <td><button class="btn btn-outline-primary">ویرایش <i class="fa-solid fa-pencil"></i></button></td>
+                                        <td><button class="btn btn-outline-danger">حذف <i class="fa-solid fa-trash"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>چرا بازسازی</td>
+                                        <td>علی اکبر</td>
+                                        <td>۵ دقیقه</td>
+                                        <td>۱۴۰۲/۰۳/۴۵</td>
+                                        <td>۱۴۰۲/۰۳/۴۵</td>
+                                        <td><button class="btn btn-outline-primary">ویرایش <i class="fa-solid fa-pencil"></i></button></td>
+                                        <td><button class="btn btn-outline-danger">حذف <i class="fa-solid fa-trash"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>چرا بازسازی</td>
+                                        <td>علی اکبر</td>
+                                        <td>۵ دقیقه</td>
+                                        <td>۱۴۰۲/۰۳/۴۵</td>
+                                        <td>۱۴۰۲/۰۳/۴۵</td>
+                                        <td><button class="btn btn-outline-primary">ویرایش <i class="fa-solid fa-pencil"></i></button></td>
+                                        <td><button class="btn btn-outline-danger">حذف <i class="fa-solid fa-trash"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="d-grid mt-4 mb-3">
+                            <a href="" class="btn btn-dark">برای ایجاد مقاله کلیک کن<i class="fa-solid fa-file-edit ms-2"></i></a>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+        <!-- End Articles -->
+
+        <!-- Admins List -->
+        <section class="py-5">
+            <div class="container-md">
+                <div class="row bg-white rounded-3 p-5 shadow-lg justify-content-between">
+                    <div class="col-12 text-center mb-4">
+                        <p class="display-5">مدیریت ادمین ها</p>
+                        <hr class="border border-3 border-dark-subtle">
+                    </div>
+                    <div class="col-md-4">
+                        <form action="">
+                            <p class="h2 mb-4">افزودن ادمین</p>
+                            <div class="mb-3">
+                                <label class="mb-2" for="name">نام ادمین</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-2" for="name">نام کاربری</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-2" for="name">پسورد</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-2" for="name">تصویر پروفایل</label>
+                                <input type="file" class="form-control">
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-success">افزودن</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="h2 mb-4">لیست ادمین ها</p>
+                        <div class="table-responsive table-container">
+                            <table class="table">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th>نام</th>
+                                        <th>نام کاربری</th>
+                                        <th>پسورد</th>
+                                        <th>تصویر پروفایل</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center align-middle">
+                                    <tr>
+                                        <td class="select-admin">ممد</td>
+                                        <td class="select-admin">mmd45</td>
+                                        <td class="select-admin">lksfs938</td>
+                                        <td class="user-select-none">
+                                            <img src="Images/images.png" class="img-fluid rounded-circle" alt="" style="width: 35px; height: 35px;">
+                                        </td>
+                                        <td class="user-select-none"><button class="btn btn-outline-primary">ویرایش <i class="fa-solid fa-pencil"></i></button></td>
+                                        <td class="user-select-none"><button class="btn btn-outline-danger">حذف <i class="fa-solid fa-trash"></i></button></td>                                    
+                                    </tr>
+                                    <tr>
+                                        <td class="select-admin">مشتی</td>
+                                        <td class="select-admin">mashti84</td>
+                                        <td class="select-admin">idj55hh</td>
+                                        <td class="user-select-none">
+                                            <img src="Images/images.png" class="img-fluid rounded-circle" alt="" style="width: 35px; height: 35px;">
+                                        </td>
+                                        <td class="user-select-none"><button class="btn btn-outline-primary">ویرایش <i class="fa-solid fa-pencil"></i></button></td>
+                                        <td class="user-select-none"><button class="btn btn-outline-danger">حذف <i class="fa-solid fa-trash"></i></button></td>                                    
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Admins List -->
+    </main>
+    <!-- End Main -->
+
+
+    <!-- Footer -->
+    <footer class="bg-light">
+        <div class="container-md">
+            <div class="row bg-light">
+                <div class="col">
+                    <p class="text-muted text-center bg-light">من ساختم <samp class="text-danger">من</samp>، پس کپی نکن پدرسگ</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+
+    <!-- Custom Scripts -->
+    <script src="Js/jquery-v3.7.1-min.js"></script>
+    
+    <!-- Bootstarp Js -->
+    <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+    crossorigin="anonymous">
+    </script>
+</body>
+</html>
